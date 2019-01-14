@@ -1,0 +1,13 @@
+server:
+  port: 9001
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    # 每隔10s发送一次心跳
+    lease-renewal-interval-in-seconds: 10
+    # eureka-server会每隔5s检查instance的续约时间，最后一次续约超过10s 将会注销服务的实例
+    lease-expiration-duration-in-seconds: 20
+  client:
+    # 指定服务注册中心
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/

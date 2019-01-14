@@ -1,0 +1,29 @@
+
+注解
+	@EnableEurekaServer
+	@SpringBootApplication
+
+pom
+	<parent>
+		<artifactId>spc-parent</artifactId>
+		<groupId>com.spc</groupId>
+		<version>1.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>spc-eureka-server</artifactId>
+	<packaging>jar</packaging>
+
+	<name>spc-eureka-server</name>
+	<description>服务注册中心</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${artifactId}</finalName>
+	</build>

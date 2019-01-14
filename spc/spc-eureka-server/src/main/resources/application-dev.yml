@@ -1,0 +1,21 @@
+server:
+  port: 9000
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+
+  server:
+    # 是否开启保护模式 开发设置为 false, 生产环境 设置为 true
+    enable-self-preservation: false
+    # 留存的服务实例低于多少的时候进入保护模式
+    renewal-percent-threshold: 0.85
+  client:
+    # 是否注册 eureka 自身
+    register-with-eureka: false
+    # 是否启用服务注册信息
+    fetch-registry: false
+    # 服务注册地址（注册和查询都需要这个地址），向哪里注册的地址,如果没有下面的注册地址但是开启了上面的
+    # 想注册中心注册自己就会报错，因为没有说明注册中心地址，不知道注册到哪里
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/

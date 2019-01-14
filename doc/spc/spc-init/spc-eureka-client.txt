@@ -1,0 +1,39 @@
+
+注解
+	@SpringBootApplication
+	@EnableDiscoveryClient
+
+pom
+	<parent>
+		<artifactId>spc-parent</artifactId>
+		<groupId>com.spc</groupId>
+		<version>1.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>spc-eureka-client</artifactId>
+	<packaging>jar</packaging>
+
+	<name>spc-eureka-client</name>
+	<description>服务提供者</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.spc</groupId>
+			<artifactId>spc-util</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${artifactId}</finalName>
+	</build>
